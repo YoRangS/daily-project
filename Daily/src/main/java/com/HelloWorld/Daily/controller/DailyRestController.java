@@ -66,7 +66,14 @@ public class DailyRestController {
     }
 
     // Daily 삭제
+    @PostMapping("/daily-delete/{dailyId}")
+    @ResponseStatus(HttpStatus.OK)
+    public ApiResponse<?> deleteDaily(@PathVariable Long dailyId) {
 
+        dailyService.deleteDaily(dailyId);
+
+        return ApiResponse.createSuccessWithNoContent(); // 공통 API를 반환하기 위한 ApiResponse 객체 사용
+    }
 
     // 좋아요 기능
     @PostMapping("/daily-like/{dailyId}")

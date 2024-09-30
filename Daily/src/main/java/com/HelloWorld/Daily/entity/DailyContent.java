@@ -64,4 +64,13 @@ public class DailyContent extends Common {
             this.penitence3 = requestDTO.getPenitence3();
         }
     }
+
+    public void deleteDailyContent(DailyDTO.RequestDTO requestDTO) {
+        this.thanks1 = null;
+        this.thanks2 = null;
+        this.thanks3 = null;
+        this.penitence1 = null;
+        this.penitence2 = null;
+        this.penitence3 = null;
+    }
 }
